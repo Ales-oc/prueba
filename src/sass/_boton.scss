@@ -1,0 +1,16 @@
+@import './variables', './mixins';
+
+.boton {
+    $type: btn;
+    background-color: $secundario;
+    color: $blanco;
+    margin-top: .5rem;
+    padding: .5rem 3rem;
+    border-radius: 5px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    border:none;
+    @include hover($type);
+}

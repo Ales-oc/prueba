@@ -1,0 +1,21 @@
+@import './variables', './mixins';
+
+.navegacion {
+    //scroll-snap
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    a{
+        $type: opt-menu;
+        padding: 1rem 2rem;
+        color: $blanco;
+        text-decoration: none;
+        font-size: 1.4rem;
+        font-weight: 700;
+        //mixin
+        @include hover($type)
+    }
+}

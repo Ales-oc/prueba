@@ -1,0 +1,55 @@
+@import './variables';
+
+///@access public
+///@author Alejandro
+///@group Formulario
+///@require _variables.scss
+
+.campo {
+    margin-bottom: 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex: 0 0 calc(50% - .5rem);
+    ///npm installBucle for que terminará en el cuarto campo del formulario y añadirá estilos diferente para el elemento label (odd) y los inputs (even)
+    @for $i from 1 to 4 {
+        label:nth-child(odd) {
+            color: $blanco;
+            font-weight: 700;
+            margin-bottom: .5rem;
+            display: block;
+            flex: 0 0 90px;
+        }
+        input:nth-child(even) {
+            width: 100%;
+            padding: .5rem;
+            border: none;
+            border-radius: .5rem;
+            flex: 1;
+        }
+    }
+    /*label {
+        color: $blanco;
+        font-weight: 700;
+        margin-bottom: .5rem;
+        display: block;
+        flex: 0 0 90px;
+    }*/
+    /*input {
+        &[type="text"], &[type="tel"], &[type="mail"]{
+            width: 100%;
+            padding: .5rem;
+            border: none;
+            border-radius: .5rem;
+            flex: 1;
+        }
+    }*/
+    textarea{
+        width: 100%;
+        padding: .5rem;
+        border: none;
+        border-radius: .5rem;
+        flex: 1;
+        height: 4rem;
+    }
+}

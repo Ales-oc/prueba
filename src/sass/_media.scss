@@ -1,0 +1,21 @@
+@import './variables';
+
+@media (min-width:480px) {
+    .campo label {
+        flex: 0 0 90px;
+    }
+}
+@media (min-width: 768px) {
+    .campo{
+        input{
+            &[type="text"],  
+            &[type="tel"],  
+            &[type="mail"]{
+                flex: 1;
+            }
+        }
+        textarea {
+            flex: 1;
+        }
+    }
+}

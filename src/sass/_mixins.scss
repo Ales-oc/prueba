@@ -1,0 +1,19 @@
+///@access public
+///@author Alejandro
+///@group Mixins
+///@parameter {string} $type - El tipo de elemento a modificar en el hover
+///@example scss- Regla(Mixin) para el hover
+/// @include hover($type) en un elemento
+
+@mixin hover($type) {
+    @if $type == opt-menu {
+        &:hover {
+            background-color: $primario;
+            color: $oscuro;
+        }  
+    } @else if $type == btn {
+        &:hover {
+            cursor: pointer;
+        }  
+    }
+}
